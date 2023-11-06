@@ -1,0 +1,99 @@
+
+
+@import url('https://fonts.cdnfonts.com/css/super-mario-256');
+
+.home {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -90%);
+    width: 80vw;
+    min-height: 50vh;
+    border-radius: 5px; 
+    border: 1px solid black;
+    font-family: 'Super Mario 256', sans-serif;
+}
+
+
+#sound-card i{
+    font-size:40px;
+}
+
+
+.home-title{
+  font-family: 'Super Mario 256', sans-serif;
+  text-align: center;
+  font-size: 150px;
+  color: orangered;
+
+}
+
+
+.menu-container{
+ transform: translate(100%, 10%); 
+ position: absolute; 
+ /* background-color: aliceblue; */
+ border: 2px solid black; 
+ min-height: 20vh;
+ width: 500px;
+ display: flex;
+ flex-direction: column;
+
+}
+
+
+
+
+.menu-card{
+    text-align: center;
+    font-size: 50px;
+    position: relative;
+    border: 10px solid white;
+    padding: 0.2em 0;
+    margin: 0.2em 0; 
+    width: 500px;
+    border-radius: 50px;
+    background-color: gold;
+    transition: 0.3s ease-in-out;
+}
+
+.menu-card label{
+    transition: 0.3s ease-in-out;  
+}
+
+.menu-card:hover, .menu-card label:hover{
+    cursor: pointer;
+    background-color: lightgoldenrodyellow;
+}
+
+.menu-card:hover{
+    scale:calc(1.2)
+}
+
+.icon{
+    position: absolute;  
+    color: gold; 
+    background-color: navy;
+    transform: translate(10%, 10%); 
+    border-radius: 999px;
+    width: 60px;
+    height: 60px;
+    left: 20%; 
+    transition: 0.3s; 
+    
+
+}
+
+.icon:hover{
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+.icon i {
+    position: absolute; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    font-size:30px;
+}
+
