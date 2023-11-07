@@ -1,4 +1,4 @@
-# Reddy 14 Client App
+# Lap1_final_project - Reddy 14 Client App
 
 Reddy 14 Client App is the frontend of an engaging geography game designed to make learning non-STEM subjects more interesting for kids. This game is a simple "Guess the Capital Cities" game that aims to educate and entertain young learners while teaching them about the world's capital cities.
 
