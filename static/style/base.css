@@ -1,9 +1,15 @@
 
+@import url('https://fonts.googleapis.com/css?family=VT323');
 *{
     padding: 0;
     margin: 0; 
+
 }
 
+
+body{
+    font-family: 'VT323';
+}
 
 body::after{
     content: "";

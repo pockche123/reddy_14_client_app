@@ -48,8 +48,6 @@ document.getElementById('play-button').addEventListener('click', function () {
 });
 
 
-const easy = document.getElementsByClassName("difficulty-card")
-
 
 function navToQuiz(id) {
     console.log("inside button")
