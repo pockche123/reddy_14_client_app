@@ -6,6 +6,7 @@
 
 const urlParams = new URLSearchParams(window.location.search);
 const difficulty = urlParams.get('param');
+const username = urlParams.get('user'); 
 const quizTitleElement = document.getElementById('quiz-title');
 
 quizTitleElement.textContent += `${difficulty}`;
