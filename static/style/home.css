@@ -42,7 +42,7 @@
 .menu-container {
   position: fixed;
   top: 100%;
-  left: 55%;
+  left: 50%;
   transform: translate(-50%, -50%);
   border: 2px solid black;
   min-height: 20vh;
