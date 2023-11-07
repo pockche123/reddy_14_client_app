@@ -30,24 +30,28 @@
 .home-title{
   font-family: 'Super Mario 256', sans-serif;
   text-align: center;
-  font-size: 70px;
+  font-size: 90px;
   /* font-size: 100px; */
   color: orangered;
 
 }
 
 
-.menu-container{
- transform: translate(90%, 10%); 
-  /* transform: translate(110%, 10%);  */
- position: absolute; 
- border: 2px solid black; 
- min-height: 20vh;
- width: 400px;
- display: flex;
- flex-direction: column;
 
+
+.menu-container {
+  position: fixed;
+  top: 100%;
+  left: 55%;
+  transform: translate(-50%, -50%);
+  border: 2px solid black;
+  min-height: 20vh;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
+
 
 
 
@@ -68,7 +72,7 @@
     transition: 0.3s ease-in-out;
 }
 
-.menu-card label{
+.menu-card label, .difficulty-card{
     transition: 0.3s ease-in-out;  
 }
 
@@ -111,3 +115,23 @@
     font-size: 15px; 
 }
 
+
+.play-buttons{
+    justify-content: space-between;
+    
+
+}
+.difficulty-card{
+    width: 100px;
+    border-radius: 50px;
+    border-radius: 2px solid white;
+    /* margin-right: 1em; */
+    margin: 1em 0.5em; 
+    
+
+}
+
+.difficulty-card:hover{
+    transform: scale(1.2); 
+    cursor: pointer;
+}
