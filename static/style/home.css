@@ -2,6 +2,8 @@
 
 @import url('https://fonts.cdnfonts.com/css/super-mario-256');
 
+
+
 .home {
     position: absolute;
     top: 50%;
@@ -15,27 +17,33 @@
 }
 
 
+
 #sound-card i{
     font-size:40px;
+}
+
+#sound-card i{
+    font-size:20px;
 }
 
 
 .home-title{
   font-family: 'Super Mario 256', sans-serif;
   text-align: center;
-  font-size: 150px;
+  font-size: 70px;
+  /* font-size: 100px; */
   color: orangered;
 
 }
 
 
 .menu-container{
- transform: translate(100%, 10%); 
+ transform: translate(90%, 10%); 
+  /* transform: translate(110%, 10%);  */
  position: absolute; 
- /* background-color: aliceblue; */
  border: 2px solid black; 
  min-height: 20vh;
- width: 500px;
+ width: 400px;
  display: flex;
  flex-direction: column;
 
@@ -46,12 +54,15 @@
 
 .menu-card{
     text-align: center;
-    font-size: 50px;
+    /* font-size:30px; */
+    font-size:25px;
     position: relative;
-    border: 10px solid white;
+    /* border: 10px solid white; */
+    border: 6px solid white;
     padding: 0.2em 0;
     margin: 0.2em 0; 
-    width: 500px;
+    /* width: 400px; */
+    width: 300px;
     border-radius: 50px;
     background-color: gold;
     transition: 0.3s ease-in-out;
@@ -74,10 +85,12 @@
     position: absolute;  
     color: gold; 
     background-color: navy;
-    transform: translate(10%, 10%); 
+    transform: translate(0%,10%); 
     border-radius: 999px;
-    width: 60px;
-    height: 60px;
+    /* width: 40px;
+    height: 40px; */
+    width: 30px; 
+    height: 30px;
     left: 20%; 
     transition: 0.3s; 
     
@@ -94,6 +107,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%); 
-    font-size:30px;
+    /* font-size:20px; */
+    font-size: 15px; 
 }
 
