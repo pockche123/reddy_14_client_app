@@ -1,0 +1,26 @@
+
+
+
+
+
+.quiz-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -60%);
+    width: 60vw;
+    min-height: 70vh;
+    border-radius: 5px; 
+    border: 1px solid black;
+    background-color: gainsboro;
+    text-align: center;
+}
+
+.quiz-heading {
+    font-weight: 1000;
+    font-size: 50px;
+}
+
+.quiz-container img{
+    height: 50px;
+}

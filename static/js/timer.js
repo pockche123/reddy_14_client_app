@@ -5,6 +5,7 @@ if (timerDisplayElement) {
 }
 
 function startTimer(difficulty) {
+  console.log("difficulty: line 8 : ",difficulty)
   if (difficulty === "easy") {
     timer = 480;
   } else if (difficulty === "medium") {
@@ -40,3 +41,6 @@ function startTimer(difficulty) {
     }
   }, 1000);
 }
+
+
+module.exports = {startTimer}
