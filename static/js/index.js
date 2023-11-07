@@ -18,14 +18,23 @@ let buttonsVisible = false;
 document.getElementById('play-button').addEventListener('click', function () {
     let labels = ['easy', 'medium', 'hard'];
 
+    let buttonSection = document.querySelector('.play-buttons');
+
     if (buttonsVisible) {
         for (let i = 0; i < 3; i++) {
             let newButton = document.createElement('button');
-            newButton.className = 'difficulty-card';
+            if (i === 0) {
+                newButton.className = 'btn btn-success difficulty-card';
+            } else if (i === 1) {
+                newButton.className = 'btn btn-warning difficulty-card';
+            } else {
+                newButton.className = 'btn btn-danger difficulty-card';
+
+            }
             newButton.innerHTML = `
                     <label>${labels[i]}</label>
                 `;
-            document.body.appendChild(newButton);
+            buttonSection.appendChild(newButton);
         }
     } else {
         let buttonsToRemove = document.querySelectorAll('.difficulty-card');
