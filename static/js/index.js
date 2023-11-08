@@ -69,8 +69,8 @@ document.getElementById('play-button').addEventListener('click', function () {
 
 function navToQuiz(id) {
 const user = document.getElementById('user')
-     const username = user.textContent.substring(8);
+    const username = user.textContent.substring(8);
     console.log('username ',  username)
   console.log('inside button')
-  window.location.href = `quiz.html?param=${id}&user=${username}`
+  window.location.href = `quiz.html?difficulty=${id}&user=${username}`
 }
