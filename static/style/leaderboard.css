@@ -127,3 +127,9 @@ tr:nth-child(even) {
     transform: scale(1.2);
     transition: transform 0.3s;
 }
+
+.userRank{
+    color: black;
+    text-align: center;
+    background-color: beige;
+}

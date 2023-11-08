@@ -45,8 +45,32 @@ async function makeTable(){
     .then(data => {
         console.log(data);
         listRanks(data);
+        userRank(data, username)
     })
 
+}
+
+function userRank(data, username) {
+    const userRank = document.querySelector(".userRank");
+    let row;
+
+    const index = data.findIndex(obj => obj.username === username);
+    
+    if (index !== -1) {
+        row = `<tr>
+                    <td class="rank">${index + 1}</td>
+                    <td class="name">${data[index].username}</td>
+                    <td class="score">${data[index].score}</td>
+                </tr>`;
+    } else {
+        row = `<tr>
+                    <td class="rank">N/A</td>
+                    <td class="name">N/A</td>
+                    <td class="score">N/A</td>
+                </tr>`;
+    }
+    
+    userRank.innerHTML = row;
 }
 
 
