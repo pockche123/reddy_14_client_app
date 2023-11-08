@@ -29,6 +29,13 @@
     align-items: center;
 }
 
+.table {
+
+    max-height: 50vh;
+    overflow-y: auto; 
+    
+}
+
 .arrow {
     height: 50%;
     
@@ -45,8 +52,12 @@ table, th, td {
     border: 1px solid #ddd;
 }
 
+.user{
+    background-color: greenyellow;
+}
+
 th, td {
-    padding: 10px;
+    /* padding: 10px; */
     font-size: 20px;
 }
 
@@ -54,6 +65,9 @@ th {
     background-color:rgb(246, 199, 110);
     color: #fff;
 }
+/* tr {
+    padding: -50px;
+} */
 
 tr:nth-child(even) {
     background-color: #f2f2f2;
@@ -93,13 +107,6 @@ tr:nth-child(even) {
     transition: transform 0.2s;
 }
 
-/* @media (min-width: 1200px) {
-    .rankings {
-        grid-column-gap: 30pxpx;
-    }
-} */
-
-
 .btn {
     display: grid;
     justify-content: center;
@@ -109,11 +116,11 @@ tr:nth-child(even) {
 #homeBtn {
     padding: 3.5vh 10vh;
     background-color: bisque;
-    /* font-family: Georgia, 'Times New Roman', Times, serif; */
     font-size: 30px;
     color:chocolate;
     margin-top: -30px;
-    border-radius: 5px;
+    border-radius: 50px;
+    text-decoration: none;
 }
 #homeBtn:hover{
     cursor: pointer;
