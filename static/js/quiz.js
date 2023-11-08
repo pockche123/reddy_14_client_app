@@ -1,5 +1,3 @@
-// const {startTimer } = require("./timer")
-
 const urlParams = new URLSearchParams(window.location.search)
 const difficulty = urlParams.get('difficulty')
 const username = urlParams.get('user')
@@ -12,6 +10,7 @@ const buttons = document.querySelectorAll('.enter-button')
 const capitalCity = document.getElementById('city')
 let city = ''
 let ans = ''
+let userIsPresent = null
 
 quizTitleElement.textContent += `${difficulty}`
 let currentScore = 0
@@ -34,6 +33,7 @@ buttons.forEach(function (button) {
   button.addEventListener('click', function (e) {
     e.preventDefault()
     checkScore()
+    getExistingUserScore()
     getRandomQuiz()
     capitalCity.value = ''
   })
@@ -50,7 +50,7 @@ document.addEventListener('keydown', function (event) {
   if (event.key === 'Enter' && !enterPressed) {
     enterPressed = true
     checkScore()
-    getRandomQuiz()
+    getExistingUserScore()
     capitalCity.value = ''
   }
 })
@@ -81,21 +81,25 @@ const checkScore = () => {
   }
 }
 
-const getExistingUserScore = async () => {
-  try {
-    const response = await fetch(
-      `http://localhost:8080/scores/user/${username}`
-    )
-    const data = await response.json()
+const getExistingUserScore = () => {
+  fetch(`http://localhost:8080/scores/user/${username}`)
+    .then(resp => resp.json())
+    .then(data => {
+      console.log('inside getExisitng', data[0].score)
+      console.log('current score ', currentScore)
 
-    return currentScore > data?.score
-  } catch (error) {
-    console.error('Error:', error)
-    return null
-  }
+      if (currentScore > data[0].score) {
+        userIsPresent = true
+      } else if (currentScore <= data[0].score) {
+        userIsPresent = false
+      }
+      console.log('userIsPresent: ', userIsPresent)
+    })
+    .catch(e => {
+      console.log(e)
+      console.log('not found ')
+    })
 }
-
-// const result = await getExistingUserScore();
 
 function startTimer (difficulty) {
   console.log('difficulty: line 8 : ', difficulty)
@@ -125,13 +129,16 @@ function startTimer (difficulty) {
 
     if (--timer < 0) {
       clearInterval(intervalId)
+      console.log('? ', userIsPresent)
       audio.pause()
-      alert("Time's up!")
-      if (result == null) {
+      if (userIsPresent == undefined || userIsPresent == null) {
         createScore()
-      } else if (result) {
+      } else if (userIsPresent) {
         updateScore()
+      } else if (userIsPresent == false) {
+        window.location.href = `leaderboard.html?difficulty=${difficulty}&user=${username}`
       }
+      alert("Time's up!")
 
       time.style.color = 'black'
     }
@@ -141,14 +148,6 @@ function startTimer (difficulty) {
 async function createScore () {
   console.log('inside create score')
 
-  console.log(
-    'username ',
-    username,
-    ', score: ',
-    currentScore,
-    ', difficulty: ',
-    difficulty
-  )
   const options = {
     method: 'POST',
     headers: {
@@ -164,6 +163,31 @@ async function createScore () {
   const response = await fetch('http://localhost:8080/score', options)
 
   if (response.status === 201) {
+    console.log('score created')
+    window.location.href = `leaderboard.html?difficulty=${difficulty}&user=${username}`
+  } else {
+    console.log('error')
+  }
+}
+
+async function updateScore () {
+  console.log('inside update score')
+
+  const options = {
+    method: 'PATCH',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+      score: currentScore
+    })
+  }
+  const response = await fetch(
+    `http://localhost:8080/score/user/${username}`,
+    options
+  )
+
+  if (response.status === 200) {
     console.log('score created')
     window.location.href = `leaderboard.html?difficulty=${difficulty}&user=${username}`
   } else {
