@@ -51,6 +51,10 @@
     left: 50%; 
     transform: translate(-50%, -50%);
     text-align: center;
+    background-color:lightsteelblue;
+    padding: 3em;
+    border-radius: 15px;
+    border: 5px solid white;
 }
 
 .menu-container {

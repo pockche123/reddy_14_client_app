@@ -5,22 +5,67 @@
 
 .quiz-container {
     position: absolute;
-    top: 50%;
+    top: 60%;
     left: 50%;
     transform: translate(-50%, -60%);
     width: 60vw;
     min-height: 70vh;
     border-radius: 5px; 
-    border: 1px solid black;
     background-color: gainsboro;
+    border: 4px solid whitesmoke;
+    border-radius: 10px;
+}
+
+#timer{
+    font-size: larger;
+    text-align: right;
+    margin-right: 1em;
+
+}
+
+.quiz-time{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    border: 1px solid blue;
+}
+
+.quiz-info{
+    display: block; 
+    margin: 2% auto;
+    border: 1px solid ;
+    width: 500px;
     text-align: center;
+}
+
+.quiz-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin: 5% 5%; 
+}
+
+.enter-button{
+    width: 100px;
 }
 
 .quiz-heading {
     font-weight: 1000;
     font-size: 50px;
+    text-align: center;
 }
 
 .quiz-container img{
     height: 50px;
+}
+
+#flag{
+    height: 150px; 
+    padding: 20px 0; 
+}
+
+.score{
+    display: flex;
+    flex-direction: row;
+    margin: 1em 2em;
 }

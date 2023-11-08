@@ -7,11 +7,11 @@ if (timerDisplayElement) {
 function startTimer(difficulty) {
   console.log("difficulty: line 8 : ",difficulty)
   if (difficulty === "easy") {
-    timer = 480;
+    timer = 180;
   } else if (difficulty === "medium") {
-    timer = 300;
+    timer = 120;
   } else {
-    timer = 240;
+    timer = 60;
   }
   let audio = new Audio("/assets/mixkit-alarm-clock-beep-988.wav");
 
@@ -43,4 +43,4 @@ function startTimer(difficulty) {
 }
 
 
-module.exports = {startTimer}
+// module.exports = {startTimer}

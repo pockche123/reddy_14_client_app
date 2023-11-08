@@ -1,19 +1,172 @@
-
-
 // const {startTimer } = require("./timer")
 
+const urlParams = new URLSearchParams(window.location.search)
+const difficulty = urlParams.get('difficulty')
+const username = urlParams.get('user')
+const quizTitleElement = document.getElementById('quiz-title')
+const flagSource = document.getElementById('flag')
+const country = document.getElementById('country')
+const enterButton = document.getElementsByClassName('enter-button')
+const totalScore = document.getElementById('total-score')
+const buttons = document.querySelectorAll('.enter-button')
+const capitalCity = document.getElementById('city')
+let city = ''
+let ans = ''
 
+quizTitleElement.textContent += `${difficulty}`
+let currentScore = 0
 
-const urlParams = new URLSearchParams(window.location.search);
-const difficulty = urlParams.get('param');
-const username = urlParams.get('user'); 
-const quizTitleElement = document.getElementById('quiz-title');
+capitalCity.addEventListener('input', function () {
+  city = capitalCity.value
+  console.log('The value has changed to: ' + city)
+})
 
-quizTitleElement.textContent += `${difficulty}`;
+const showImage = place => {
+  flagSource.src = place?.flag
+  country.textContent = place?.country
+  console.log('ans ', place?.capital.toLowerCase().trim())
+  console.log('city ', city.toLowerCase().trim())
+  if (place?.capital.toLowerCase().trim() === city.toLowerCase().trim()) {
+  }
+}
 
-console.log("quiz difficulty ", difficulty)
+buttons.forEach(function (button) {
+  button.addEventListener('click', function (e) {
+    e.preventDefault()
+    checkScore()
+    getRandomQuiz()
+    capitalCity.value = ''
+  })
+})
 
-// if (difficulty) {
-//     startTimer(difficulty)
-// }
+document.addEventListener('DOMContentLoaded', function () {
+  getRandomQuiz()
+  startTimer(difficulty)
+})
 
+let enterPressed = false
+
+document.addEventListener('keydown', function (event) {
+  if (event.key === 'Enter' && !enterPressed) {
+    enterPressed = true
+    checkScore()
+    getRandomQuiz()
+    capitalCity.value = ''
+  }
+})
+
+document.addEventListener('keyup', function (event) {
+  if (event.key === 'Enter') {
+    enterPressed = false
+  }
+})
+
+const getRandomQuiz = () => {
+  fetch('http://localhost:8080/quiz/questions')
+    .then(resp => resp.json())
+    .then(data => {
+      console.log('place ', data)
+      place = data
+      showImage(data)
+      ans = data?.capital
+    })
+    .catch(e => console.log(e))
+}
+
+const checkScore = () => {
+  if (ans.toLowerCase().trim() === city.toLowerCase().trim()) {
+    currentScore += 1
+    console.log('currentScore', currentScore)
+    totalScore.textContent = currentScore
+  }
+}
+
+const getExistingUserScore = async () => {
+  try {
+    const response = await fetch(
+      `http://localhost:8080/scores/user/${username}`
+    )
+    const data = await response.json()
+
+    return currentScore > data?.score
+  } catch (error) {
+    console.error('Error:', error)
+    return null
+  }
+}
+
+// const result = await getExistingUserScore();
+
+function startTimer (difficulty) {
+  console.log('difficulty: line 8 : ', difficulty)
+  if (difficulty === 'easy') {
+    timer = 180
+  } else if (difficulty === 'medium') {
+    timer = 120
+  } else {
+    timer = 10
+  }
+  let audio = new Audio('/assets/mixkit-alarm-clock-beep-988.wav')
+
+  const intervalId = setInterval(function () {
+    minutes = Math.floor(timer / 60)
+    seconds = timer % 60
+
+    minutes = minutes < 10 ? '0' + minutes : minutes
+    seconds = seconds < 10 ? '0' + seconds : seconds
+
+    const time = document.querySelector('#time')
+    time.textContent = minutes + ':' + seconds
+
+    if (timer <= 8) {
+      time.style.color = 'red'
+      audio.play()
+    }
+
+    if (--timer < 0) {
+      clearInterval(intervalId)
+      audio.pause()
+      alert("Time's up!")
+      if (result == null) {
+        createScore()
+      } else if (result) {
+        updateScore()
+      }
+
+      time.style.color = 'black'
+    }
+  }, 1000)
+}
+
+async function createScore () {
+  console.log('inside create score')
+
+  console.log(
+    'username ',
+    username,
+    ', score: ',
+    currentScore,
+    ', difficulty: ',
+    difficulty
+  )
+  const options = {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+      username: username,
+      score: currentScore,
+      difficulty: difficulty
+    })
+  }
+
+  const response = await fetch('http://localhost:8080/score', options)
+
+  if (response.status === 201) {
+    console.log('score created')
+    window.location.href = `leaderboard.html?difficulty=${difficulty}&user=${username}`
+  } else {
+    console.log('error')
+  }
+}

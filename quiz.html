@@ -22,14 +22,33 @@
   <body>
     <!-- <h1>Quiz page</h1> -->
     <main class="quiz-container">
+      <div class="quiz-time">
       <img src="./assets/images/toppng.com-international-flags-banner-png-world-flag-bunting-vector-free-881x264.png" alt="flags"/>
-      <section class="quiz-heading">
-         <label id="quiz-title">Geography Quiz: </label>
-      </section>
-      <div id="timer">
+        <div id="timer">
+          <h6>Time remaining:</h6>
         <label id="time"></label>
-        <button>Start</button>
+        </div>
       </div>
+      <section class="quiz-heading">
+         <label id="quiz-title">Quiz Difficulty: </label>
+      </section>
+    
+
+      <div class="quiz-info">
+        <img id="flag" src="" />
+        <h5 id="country"></h5>
+        <input type="text" class="form-control" id="city" />
+
+        <div class="quiz-buttons">
+          <button class="btn btn-danger enter-button">PASS</button>
+          <button class="btn btn-success enter-button">ENTER</button>
+        </div>
+      </div>
+
+      <div class="score">
+      <h2>Total Score: <h2 id="total-score"></h2></h2>
+      </div>
+    
     </main>
   </body>
 </html>
