@@ -1,68 +1,62 @@
-
-
 @import url('https://fonts.cdnfonts.com/css/super-mario-256');
-
-
 
 .home {
     position: absolute;
-    top: 50%;
+    top: 55%;
     left: 50%;
     transform: translate(-50%, -90%);
     width: 80vw;
     min-height: 50vh;
     border-radius: 5px; 
-    border: 1px solid black;
+    margin-bottom:3rem;
+   /* border: 1px solid black;*/
     font-family: 'Super Mario 256', sans-serif;
 }
 
 
+#btnSubmit {
+  display: inline-block;
+  margin-top: 0.7em;
+  font-size: 20px;
+}
 
+.btn
 .play-buttons, #play-button, #instruction-button, #leaderboard-button, #user {
     display: none;
 }
 
-
-
-
-#sound-card i{
-    font-size:40px;
+#sound-card i {
+    font-size:30px;
 }
 
-#sound-card i{
-    font-size:20px;
-}
-
-
-.home-title{
+.home-title {
   font-family: 'Super Mario 256', sans-serif;
   text-align: center;
   font-size: 90px;
   /* font-size: 100px; */
   color: orangered;
-
 }
 
-
-#username-form{
+#username-form {
     z-index: 100; 
     position: fixed; 
-    top: 100%; 
+    top: 80%; 
     left: 50%; 
     transform: translate(-50%, -50%);
     text-align: center;
     background-color:lightsteelblue;
     padding: 3em;
     border-radius: 15px;
-    border: 5px solid white;
+    border: 5px solid rgb(248, 248, 248);
 }
 
 .menu-container {
+  margin-top:50px;
   position: fixed;
-  top: 120%;
+  top: 80%;
   left: 50%;
   transform: translate(-50%, -50%);
-  border: 2px solid black;
+/*  border: 2px solid black;*/
   min-height: 20vh;
   width: 400px;
   display: flex;
@@ -70,10 +64,6 @@
   align-items: center;
   z-index: 1; 
 }
-
-
-
-
 
 .menu-card{
     text-align: center;
@@ -91,20 +81,20 @@
     transition: 0.3s ease-in-out;
 }
 
-.menu-card label, .difficulty-card{
+.menu-card label, .difficulty-card {
     transition: 0.3s ease-in-out;  
 }
 
-.menu-card:hover, .menu-card label:hover{
+.menu-card:hover, .menu-card label:hover {
     cursor: pointer;
     background-color: lightgoldenrodyellow;
 }
 
-.menu-card:hover{
+.menu-card:hover {
     scale:calc(1.2)
 }
 
-.icon{
+.icon {
     position: absolute;  
     color: gold; 
     background-color: navy;
@@ -116,11 +106,9 @@
     height: 30px;
     left: 20%; 
     transition: 0.3s; 
-    
-
 }
 
-.icon:hover{
+.icon:hover {
     transform: scale(1.2);
     cursor: pointer;
 }
@@ -134,23 +122,19 @@
     font-size: 15px; 
 }
 
-
-.play-buttons{
+.play-buttons {
     justify-content: space-between;
-    
-
 }
-.difficulty-card{
+
+.difficulty-card {
     width: 100px;
     border-radius: 50px;
     border-radius: 2px solid white;
     /* margin-right: 1em; */
     margin: 1em 0.5em; 
-    
-
 }
 
-.difficulty-card:hover{
+.difficulty-card:hover {
     transform: scale(1.2); 
     cursor: pointer;
 }
