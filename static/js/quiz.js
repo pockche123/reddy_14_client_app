@@ -51,6 +51,7 @@ document.addEventListener('keydown', function (event) {
     enterPressed = true
     checkScore()
     getExistingUserScore()
+    getRandomQuiz()
     capitalCity.value = ''
   }
 })
