@@ -7,120 +7,118 @@
     transform: translate(-50%, -90%);
     width: 80vw;
     min-height: 50vh;
-    border-radius: 5px; 
-    margin-bottom:3rem;
-   /* border: 1px solid black;*/
+    border-radius: 5px;
+    margin-bottom: 3rem;
+    /* border: 1px solid black;*/
     font-family: 'Super Mario 256', sans-serif;
 }
 
 
-.exit-door{
-   font-size: 25px;
-   background-color:ghostwhite;
-   border: 2px solid black;
-   width: 40px;
-   position: absolute; 
-   margin-top: 5px; 
+.exit-door {
+    font-size: 25px;
+    background-color: ghostwhite;
+    border: 2px solid black;
+    width: 40px;
+    position: absolute;
+    margin-top: 5px;
 
 }
 
-#exit{
+#exit {
     cursor: pointer;
 }
 
 #btnSubmit {
-  display: inline-block;
-  margin-top: 0.7em;
-  font-size: 20px;
+    display: inline-block;
+    margin-top: 0.7em;
+    font-size: 20px;
 }
 
-.btn
-.play-buttons, #play-button, #instruction-button, #leaderboard-button, #user {
+.btn .play-buttons,
+#play-button,
+#instruction-button,
+#leaderboard-button,
+#user {
     display: none;
 }
 
 
 #sound-card i {
-    font-size:30px;
+    font-size: 30px;
 }
 
 .home-title {
-  font-family: 'Super Mario 256', sans-serif;
-  text-align: center;
-  font-size: 90px;
-  /* font-size: 100px; */
-  color: orangered;
+    font-family: 'Super Mario 256', sans-serif;
+    text-align: center;
+    font-size: 90px;
+    color: orangered;
 }
 
 #username-form {
-    z-index: 100; 
-    position: fixed; 
-    top: 80%; 
-    left: 50%; 
+    z-index: 100;
+    position: fixed;
+    top: 80%;
+    left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    background-color:lightsteelblue;
+    background-color: lightsteelblue;
     padding: 3em;
     border-radius: 15px;
     border: 5px solid rgb(248, 248, 248);
 }
 
 .menu-container {
-  margin-top:50px;
-  position: fixed;
-  top: 80%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-/*  border: 2px solid black;*/
-  min-height: 20vh;
-  width: 400px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  z-index: 1; 
+    margin-top: 50px;
+    position: fixed;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-height: 20vh;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1;
 }
 
-.menu-card{
+.menu-card {
     text-align: center;
-    /* font-size:30px; */
-    font-size:25px;
+    font-size: 25px;
     position: relative;
-    /* border: 10px solid white; */
     border: 6px solid white;
     padding: 0.2em 0;
-    margin: 0.2em 0; 
-    /* width: 400px; */
+    margin: 0.2em 0;
     width: 300px;
     border-radius: 50px;
     background-color: gold;
     transition: 0.3s ease-in-out;
 }
 
-.menu-card label, .difficulty-card {
-    transition: 0.3s ease-in-out;  
+.menu-card label,
+.difficulty-card {
+    transition: 0.3s ease-in-out;
 }
 
-.menu-card:hover, .menu-card label:hover {
+.menu-card:hover,
+.menu-card label:hover {
     cursor: pointer;
     background-color: lightgoldenrodyellow;
 }
 
 .menu-card:hover {
-    scale:calc(1.2)
+    scale: calc(1.2)
 }
 
 .icon {
-    position: absolute;  
-    color: gold; 
+    position: absolute;
+    color: gold;
     background-color: navy;
-    transform: translate(0%,10%); 
+    transform: translate(0%, 10%);
     border-radius: 999px;
-    /* width: 40px;
-    height: 40px; */
-    width: 30px; 
+    width: 30px;
     height: 30px;
-    left: 20%; 
-    transition: 0.3s; 
+    left: 20%;
+    transition: 0.3s;
 }
 
 .icon:hover {
@@ -129,12 +127,11 @@
 }
 
 .icon i {
-    position: absolute; 
+    position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); 
-    /* font-size:20px; */
-    font-size: 15px; 
+    transform: translate(-50%, -50%);
+    font-size: 15px;
 }
 
 .play-buttons {
@@ -145,11 +142,10 @@
     width: 100px;
     border-radius: 50px;
     border-radius: 2px solid white;
-    /* margin-right: 1em; */
-    margin: 1em 0.5em; 
+    margin: 1em 0.5em;
 }
 
 .difficulty-card:hover {
-    transform: scale(1.2); 
+    transform: scale(1.2);
     cursor: pointer;
 }

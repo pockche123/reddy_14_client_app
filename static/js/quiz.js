@@ -114,7 +114,6 @@ function startTimer (difficulty) {
   let audio = new Audio('/assets/mixkit-alarm-clock-beep-988.wav')
 
   setTimer(timer, audio)
-  
 }
 
 function setTimer (timer, audio) {

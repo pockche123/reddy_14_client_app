@@ -1,5 +1,5 @@
 body {
-    margin:0;
+    margin: 0;
     font-family: 'VT323'
 }
 
@@ -22,24 +22,23 @@ h1 {
 
 .list {
     margin-left: 3em;
-   /* margin-right: 3em;*/
-   padding-right: 3em;
-   padding-left: 3em;
-   margin-top: 0.5em;
+    padding-right: 3em;
+    padding-left: 3em;
+    margin-top: 0.5em;
 }
 
 #btn {
-   background-color:rgb(116, 163, 230);
-   padding:30px;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   border-radius: 2em;
-   font-size: 30px;
-   font-family: 'VT323'
+    background-color: rgb(116, 163, 230);
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2em;
+    font-size: 30px;
+    font-family: 'VT323'
 }
 
-#btn:hover{
+#btn:hover {
     cursor: pointer;
     transform: scale(1.1);
     transition: transform 0.3s;
@@ -47,7 +46,7 @@ h1 {
 
 .goBack {
     display: flex;
-   justify-content: center;
-   align-items: center;
-   margin-top: 0.7em;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0.7em;
 }

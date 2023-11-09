@@ -1,12 +1,10 @@
-
 const audio = document.getElementById('audio')
 const icon = document.querySelector('#sound-card i')
 const user = document.getElementById('user')
 const form = document.getElementById('username-form')
 const input = document.getElementById('username-input')
 
-
-function soundControl() {
+function soundControl () {
   console.log('inside clicked')
   if (audio.paused) {
     icon.className = 'fa-solid fa-volume-high'
@@ -16,8 +14,7 @@ function soundControl() {
     icon.className = 'fa-solid fa-volume-xmark'
   }
 }
-function showNext(e) {
-  
+function showNext (e) {
   e.preventDefault()
   if (input.value.trim() !== '') {
     user.style.display = 'block'
@@ -31,8 +28,8 @@ function showNext(e) {
 
 let buttonsVisible = false
 
-function selectDifficulty() {
-   let labels = ['easy', 'medium', 'hard']
+function selectDifficulty () {
+  let labels = ['easy', 'medium', 'hard']
 
   let buttonSection = document.querySelector('.play-buttons')
 
@@ -61,7 +58,6 @@ function selectDifficulty() {
 }
 
 function navToQuiz (id) {
-  
   const username = user.textContent.substring(8)
   console.log('username ', username)
   console.log('inside button')
@@ -88,7 +84,7 @@ userPresent()
 //   userPage()
 // })
 
-function exitToNewUser() {
+function exitToNewUser () {
   localStorage.removeItem('storedUsername')
   user.textContent = user.textContent.substring(0, 8)
   userPage()
@@ -110,5 +106,4 @@ function userPage () {
   document.getElementById('leaderboard-button').style.display = 'none'
 }
 
-
-module.exports = {soundControl, showNext, selectDifficulty, exitToNewUser}
+module.exports = { soundControl, showNext, selectDifficulty, exitToNewUser }
