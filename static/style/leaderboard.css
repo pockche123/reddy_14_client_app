@@ -46,7 +46,6 @@ table {
     border-collapse: collapse;
     background-color: #fff;
     width: auto;
-    /* margin: 1em; */
     text-align: center;
 }
 
@@ -55,12 +54,8 @@ table, th, td {
     
 }
 
-.user{
-    background-color: greenyellow;
-}
 
 th, td {
-    /* padding: 10px; */
     font-size: 20px;
 }
 
@@ -69,9 +64,7 @@ th {
     color: #fff;
     line-height: 2em;
 }
-/* tr {
-    padding: -50px;
-} */
+
 
 tr:nth-child(even) {
     background-color: #f2f2f2;
@@ -94,7 +87,6 @@ tr:nth-child(even) {
     line-height: 40px;
     cursor: pointer;
     display: inline-block;
-    /* background-color: aqua; */
 }
 
 #rightArrow {

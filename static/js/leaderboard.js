@@ -27,6 +27,7 @@ async function makeTable(){
     .then(data => {
         console.log(data);
         listRanks(data);
+        userRank(data, username)
     })
 
 }
@@ -90,6 +91,4 @@ function changeTble() {
 }
 
 changeTble();
-
-module.exports = changeTble;
 
