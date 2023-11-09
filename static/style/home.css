@@ -9,7 +9,6 @@
     min-height: 50vh;
     border-radius: 5px; 
     margin-bottom:3rem;
-   /* border: 1px solid black;*/
     font-family: 'Super Mario 256', sans-serif;
 }
 
@@ -48,7 +47,6 @@
   font-family: 'Super Mario 256', sans-serif;
   text-align: center;
   font-size: 90px;
-  /* font-size: 100px; */
   color: orangered;
 }
 
@@ -71,7 +69,6 @@
   top: 80%;
   left: 50%;
   transform: translate(-50%, -50%);
-/*  border: 2px solid black;*/
   min-height: 20vh;
   width: 400px;
   display: flex;
@@ -82,14 +79,11 @@
 
 .menu-card{
     text-align: center;
-    /* font-size:30px; */
     font-size:25px;
     position: relative;
-    /* border: 10px solid white; */
     border: 6px solid white;
     padding: 0.2em 0;
     margin: 0.2em 0; 
-    /* width: 400px; */
     width: 300px;
     border-radius: 50px;
     background-color: gold;
@@ -115,8 +109,6 @@
     background-color: navy;
     transform: translate(0%,10%); 
     border-radius: 999px;
-    /* width: 40px;
-    height: 40px; */
     width: 30px; 
     height: 30px;
     left: 20%; 
@@ -133,7 +125,6 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%); 
-    /* font-size:20px; */
     font-size: 15px; 
 }
 
@@ -145,7 +136,6 @@
     width: 100px;
     border-radius: 50px;
     border-radius: 2px solid white;
-    /* margin-right: 1em; */
     margin: 1em 0.5em; 
 }
 

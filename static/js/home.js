@@ -82,12 +82,6 @@ function userPresent () {
 
 userPresent()
 
-// document.getElementById('exit').addEventListener('click', function () {
-//   localStorage.removeItem('storedUsername')
-//   user.textContent = user.textContent.substring(0, 8)
-//   userPage()
-// })
-
 function exitToNewUser() {
   localStorage.removeItem('storedUsername')
   user.textContent = user.textContent.substring(0, 8)
