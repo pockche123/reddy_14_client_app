@@ -11,7 +11,6 @@ Reddy 14 Client App is the frontend of an engaging geography game designed to ma
 - [Usage](#usage)
 - [Gameplay](#gameplay)
 - [Contributing](#contributing)
-- [License](#license)
 
 ## Features
 

@@ -12,7 +12,7 @@ let city = ''
 let ans = ''
 let userIsPresent = null
 
-quizTitleElement.textContent += `${difficulty}`
+// quizTitleElement.textContent += `(${difficulty} mode)`
 let currentScore = 0
 
 capitalCity.addEventListener('input', function () {
@@ -41,6 +41,7 @@ buttons.forEach(function (button) {
 
 document.addEventListener('DOMContentLoaded', function () {
   getRandomQuiz()
+  getExistingUserScore()
   startTimer(difficulty)
 })
 
@@ -195,3 +196,12 @@ async function updateScore () {
     console.log('error')
   }
 }
+
+
+
+document.getElementById('cancel').addEventListener('click', () => {
+
+  if (confirm("Are you sure you want to cancel the test?")) {
+    window.location.href = "/"
+  }
+})
