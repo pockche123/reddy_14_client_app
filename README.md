@@ -55,7 +55,7 @@ Before you begin, ensure you have the following installed on your system:
    ```shell
    npm run dev
 
-2. Access the Reddy 14 Client App in your web browser at http://localhost:3000. You can now enjoy the game and learn about capital cities in an engaging way!
+2. Access the Reddy 14 Client App in your web browser at http://localhost:5500. You can now enjoy the game and learn about capital cities in an engaging way!
 
 ### Gameplay
 
