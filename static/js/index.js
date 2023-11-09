@@ -2,6 +2,8 @@ const soundCard = document.getElementById('sound-card')
 const audio = document.getElementById('audio')
 const icon = document.querySelector('#sound-card i')
 const user = document.getElementById('user')
+const form = document.getElementById('username-form')
+const input = document.getElementById('username-input')
 
 soundCard.addEventListener('click', function () {
   console.log('inside clicked')
@@ -14,24 +16,19 @@ soundCard.addEventListener('click', function () {
   }
 })
 
-document.getElementById('username-form').addEventListener('submit', (e) => showNext(e))
+form.addEventListener('submit', e => showNext(e))
 
 function showNext(e) {
-  e.preventDefault();
-  console.log('inside submit')
-    const form = document.getElementById('username-form')
-    const input = document.getElementById('username-input')
-    const user = document.getElementById('user')
-
-    if (input.value.trim() !== "") {
-        user.style.display = 'block'
-        user.textContent += input.value.trim(); 
-        form.style.display = 'none'
-        document.getElementById('play-button').style.display = 'block'
-        document.querySelector('.play-buttons').style.display = 'block'
-        document.getElementById('instruction-button').style.display = 'block'
-        document.getElementById('leaderboard-button').style.display = 'block'
-    }
+  
+  e.preventDefault()
+  if (input.value.trim() !== '') {
+    user.style.display = 'block'
+    localStorage.setItem('storedUsername', input.value)
+    user.textContent += input.value.trim()
+    input.value = ''
+    console.log(user.textContent)
+    playPage()
+  }
 }
 
 let buttonsVisible = false
@@ -55,9 +52,7 @@ document.getElementById('play-button').addEventListener('click', function () {
         newButton.id = 'hard'
       }
       newButton.addEventListener('click', () => navToQuiz(newButton.id))
-      newButton.innerHTML = `
-                    <label>${labels[i]}</label>
-                `
+      newButton.innerHTML = `<label>${labels[i]}</label>`
       buttonSection.appendChild(newButton)
     }
   } else {
@@ -67,10 +62,44 @@ document.getElementById('play-button').addEventListener('click', function () {
   buttonsVisible = !buttonsVisible
 })
 
-function navToQuiz(id) {
-const user = document.getElementById('user')
-    const username = user.textContent.substring(8);
-    console.log('username ',  username)
+function navToQuiz (id) {
+  const user = document.getElementById('user')
+  const username = user.textContent.substring(8)
+  console.log('username ', username)
   console.log('inside button')
   window.location.href = `quiz.html?difficulty=${id}&user=${username}`
+}
+
+function userPresent () {
+  if (localStorage.getItem('storedUsername')) {
+    user.textContent += localStorage.getItem('storedUsername')
+    user.style.display = 'block'
+    playPage()
+  } else {
+    form.style.display = 'block'
+  }
+}
+
+userPresent()
+
+document.getElementById('exit').addEventListener('click', function () {
+  localStorage.removeItem('storedUsername')
+  user.textContent = user.textContent.substring(0, 8)
+  userPage()
+})
+
+function playPage () {
+  form.style.display = 'none'
+  document.getElementById('play-button').style.display = 'block'
+  document.querySelector('.play-buttons').style.display = 'block'
+  document.getElementById('instruction-button').style.display = 'block'
+  document.getElementById('leaderboard-button').style.display = 'block'
+}
+
+function userPage () {
+  form.style.display = 'block'
+  document.getElementById('play-button').style.display = 'none'
+  document.querySelector('.play-buttons').style.display = 'none'
+  document.getElementById('instruction-button').style.display = 'none'
+  document.getElementById('leaderboard-button').style.display = 'none'
 }
