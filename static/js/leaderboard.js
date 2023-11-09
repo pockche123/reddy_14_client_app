@@ -35,17 +35,18 @@ function listRanks (data){
     }
     
 }
-
+ const title = document.querySelector("h1")
 // mode = "medium"
 async function makeTable(){
-    const title = document.querySelector("h1")
-    title.textContent = difficulty+" mode leaderboard"
-    await fetch(`http://localhost:8080/scores/${difficulty}`)
-    .then(data => data.json())
-    .then(data => {
-        console.log(data);
-        listRanks(data);
-    })
+    if (title) {
+        title.textContent = difficulty + " mode leaderboard"
+        await fetch(`http://localhost:8080/scores/${difficulty}`)
+            .then(data => data.json())
+            .then(data => {
+                console.log(data);
+                listRanks(data);
+            })
+    }
 
 }
 
