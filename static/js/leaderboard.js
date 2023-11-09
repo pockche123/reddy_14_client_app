@@ -22,7 +22,7 @@ function listRanks (data){
 async function makeTable(){
     const title = document.querySelector("h1")
     title.textContent = difficulty+" mode leaderboard"
-    await fetch(`http://localhost:8080/scores/${difficulty}`)
+    await fetch(`https://reddy-14-server-app-parjal.onrender.com/scores/${difficulty}`)
     .then(data => data.json())
     .then(data => {
         console.log(data);

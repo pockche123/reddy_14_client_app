@@ -1,140 +1,136 @@
 .constainer {
-    height: 100vh;
-    display: grid;
-    grid-template-rows: 15% 60% 25%;
-    justify-content: center;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 15% 60% 25%;
+  justify-content: center;
 }
 
-.pageTitle{
-    background-color:beige;
-    border-radius: 5px;
-    border: 5px solid rgb(246, 199, 110);
-    height: 50%;
-    width: 45%;
-    min-height: fit-content;
-    min-width: fit-content;
-    color: orange;
-    justify-self: center;
-    align-self: center;
-    display: grid;
-    justify-content: center;
-    align-items: center;
+.pageTitle {
+  background-color: beige;
+  border-radius: 5px;
+  border: 5px solid rgb(246, 199, 110);
+  height: 50%;
+  width: 45%;
+  min-height: fit-content;
+  min-width: fit-content;
+  color: orange;
+  justify-self: center;
+  align-self: center;
+  display: grid;
+  justify-content: center;
+  align-items: center;
 }
 
 .rankings {
-    display: grid;
-    grid-template-columns: 10% 70% 10%; 
-    justify-items: center;
-    justify-content: center; 
-    align-items: center;
+  display: grid;
+  grid-template-columns: 10% 70% 10%;
+  justify-items: center;
+  justify-content: center;
+  align-items: center;
 }
 
 .table {
-
-    max-height: 50vh;
-    overflow-y: auto; 
-    
+  max-height: 50vh;
+  overflow-y: auto;
 }
 
 .arrow {
-    height: 50%;
-    
+  height: 50%;
 }
 table {
-    width: 80%;
-    margin: 0 auto;
-    border-collapse: collapse;
-    background-color: #fff;
-    width: auto;
-    text-align: center;
+  width: 80%;
+  margin: 0 auto;
+  border-collapse: collapse;
+  background-color: #fff;
+  width: auto;
+  text-align: center;
 }
 
-table, th, td {
-    border: 1px solid #ddd;
-    
+table,
+th,
+td {
+  border: 1px solid #ddd;
 }
 
-
-th, td {
-    font-size: 20px;
+th,
+td {
+  font-size: 20px;
 }
 
 th {
-    background-color:rgb(246, 199, 110);
-    color: #fff;
-    line-height: 2em;
+  background-color: rgb(246, 199, 110);
+  color: #fff;
+  line-height: 2em;
 }
 
-
 tr:nth-child(even) {
-    background-color: #f2f2f2;
+  background-color: #f2f2f2;
 }
 
 .name {
-    width: 50vh;
+  width: 50vh;
 }
-.rank,.score{
-    width: 10vh;
-    text-align: center;
+.rank,
+.score {
+  width: 10vh;
+  text-align: center;
 }
 
 .triangle-button {
-    width: 0;
-    height: 0;
-    border-top: 40px solid transparent; 
-    border-bottom: 40px solid transparent; 
-    text-align: center;
-    line-height: 40px;
-    cursor: pointer;
-    display: inline-block;
+  width: 0;
+  height: 0;
+  border-top: 40px solid transparent;
+  border-bottom: 40px solid transparent;
+  text-align: center;
+  line-height: 40px;
+  cursor: pointer;
+  display: inline-block;
 }
 
 #rightArrow {
-    border-left: 40px solid orange; 
-    
+  border-left: 40px solid orange;
 }
 
 #leftArrow {
-    border-right: 40px solid orange; 
+  border-right: 40px solid orange;
 }
 
 .triangle-button:hover {
-    transform: scale(1.3);
-    transition: transform 0.2s;
+  transform: scale(1.3);
+  transition: transform 0.2s;
 }
 
 .btn {
-    display: grid;
-    justify-content: center;
-    align-items: center;
+  display: grid;
+  justify-content: center;
+  align-items: center;
 }
 
 #homeBtn {
-    padding: 3.5vh 10vh;
-    background-color: bisque;
-    font-size: 30px;
-    color:chocolate;
-    margin-top: -30px;
-    border-radius: 50px;
-    text-decoration: none;
+  padding: 3.5vh 10vh;
+  background-color: bisque;
+  font-size: 30px;
+  color: chocolate;
+  margin-top: -30px;
+  border-radius: 50px;
+  text-decoration: none;
 }
-#homeBtn:hover{
-    cursor: pointer;
-    transform: scale(1.2);
-    transition: transform 0.3s;
-}
-
-.userRank{
-    color: black;
-    text-align: center;
-    background-color: beige;
+#homeBtn:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+  transition: transform 0.3s;
 }
 
+.userRank {
+  color: black;
+  text-align: center;
+  background-color: beige;
+}
 
 .score {
-    display: flex;
-    margin: 0.5em;
-    position: relative; 
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  margin: 0.5em;
+  position: relative;
+  justify-content: center;
+  align-items: center;
 }

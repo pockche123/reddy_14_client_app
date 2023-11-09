@@ -63,7 +63,7 @@ document.addEventListener('keyup', function (event) {
 })
 
 const getRandomQuiz = () => {
-  fetch('http://localhost:8080/quiz/questions')
+  fetch('https://reddy-14-server-app-parjal.onrender.com/quiz/questions')
     .then(resp => resp.json())
     .then(data => {
       console.log('place ', data)
@@ -83,7 +83,7 @@ const checkScore = () => {
 }
 
 const getExistingUserScore = () => {
-  fetch(`http://localhost:8080/scores/user/${username}`)
+  fetch(`https://reddy-14-server-app-parjal.onrender.com/scores/user/${username}`)
     .then(resp => resp.json())
     .then(data => {
       console.log('inside getExisitng', data[0].score)
@@ -166,7 +166,7 @@ async function createScore () {
     })
   }
 
-  const response = await fetch('http://localhost:8080/score', options)
+  const response = await fetch('https://reddy-14-server-app-parjal.onrender.com/score', options)
 
   if (response.status === 201) {
     console.log('score created')
@@ -189,7 +189,7 @@ async function updateScore () {
     })
   }
   const response = await fetch(
-    `http://localhost:8080/score/user/${username}`,
+    `https://reddy-14-server-app-parjal.onrender.com/score/user/${username}`,
     options
   )
 

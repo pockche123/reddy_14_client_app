@@ -1,31 +1,29 @@
-@import url('https://fonts.cdnfonts.com/css/super-mario-256');
+@import url("https://fonts.cdnfonts.com/css/super-mario-256");
 
 .home {
-    position: absolute;
-    top: 55%;
-    left: 50%;
-    transform: translate(-50%, -90%);
-    width: 80vw;
-    min-height: 50vh;
-    border-radius: 5px; 
-    margin-bottom:3rem;
-   /* border: 1px solid black;*/
-    font-family: 'Super Mario 256', sans-serif;
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -90%);
+  width: 80vw;
+  min-height: 50vh;
+  border-radius: 5px;
+  margin-bottom: 3rem;
+  /* border: 1px solid black;*/
+  font-family: "Super Mario 256", sans-serif;
 }
 
-
-.exit-door{
-   font-size: 25px;
-   background-color:ghostwhite;
-   border: 2px solid black;
-   width: 40px;
-   position: absolute; 
-   margin-top: 5px; 
-
+.exit-door {
+  font-size: 25px;
+  background-color: ghostwhite;
+  border: 2px solid black;
+  width: 40px;
+  position: absolute;
+  margin-top: 5px;
 }
 
-#exit{
-    cursor: pointer;
+#exit {
+  cursor: pointer;
 }
 
 #btnSubmit {
@@ -34,18 +32,20 @@
   font-size: 20px;
 }
 
-.btn
-.play-buttons, #play-button, #instruction-button, #leaderboard-button, #user {
-    display: none;
+.btn .play-buttons,
+#play-button,
+#instruction-button,
+#leaderboard-button,
+#user {
+  display: none;
 }
 
-
 #sound-card i {
-    font-size:30px;
+  font-size: 30px;
 }
 
 .home-title {
-  font-family: 'Super Mario 256', sans-serif;
+  font-family: "Super Mario 256", sans-serif;
   text-align: center;
   font-size: 90px;
   /* font-size: 100px; */
@@ -53,103 +53,98 @@
 }
 
 #username-form {
-    z-index: 100; 
-    position: fixed; 
-    top: 80%; 
-    left: 50%; 
-    transform: translate(-50%, -50%);
-    text-align: center;
-    background-color:lightsteelblue;
-    padding: 3em;
-    border-radius: 15px;
-    border: 5px solid rgb(248, 248, 248);
-}
-
-.menu-container {
-  margin-top:50px;
+  z-index: 100;
   position: fixed;
   top: 80%;
   left: 50%;
   transform: translate(-50%, -50%);
-/*  border: 2px solid black;*/
+  text-align: center;
+  background-color: lightsteelblue;
+  padding: 3em;
+  border-radius: 15px;
+  border: 5px solid rgb(248, 248, 248);
+}
+
+.menu-container {
+  margin-top: 50px;
+  position: fixed;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /*  border: 2px solid black;*/
   min-height: 20vh;
   width: 400px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  z-index: 1; 
+  z-index: 1;
 }
 
-.menu-card{
-    text-align: center;
-    /* font-size:30px; */
-    font-size:25px;
-    position: relative;
-    /* border: 10px solid white; */
-    border: 6px solid white;
-    padding: 0.2em 0;
-    margin: 0.2em 0; 
-    /* width: 400px; */
-    width: 300px;
-    border-radius: 50px;
-    background-color: gold;
-    transition: 0.3s ease-in-out;
+.menu-card {
+  text-align: center;
+  font-size: 25px;
+  position: relative;
+  border: 6px solid white;
+  padding: 0.2em 0;
+  margin: 0.2em 0;
+  width: 300px;
+  border-radius: 50px;
+  background-color: gold;
+  transition: 0.3s ease-in-out;
 }
 
-.menu-card label, .difficulty-card {
-    transition: 0.3s ease-in-out;  
+.menu-card label,
+.difficulty-card {
+  transition: 0.3s ease-in-out;
 }
 
-.menu-card:hover, .menu-card label:hover {
-    cursor: pointer;
-    background-color: lightgoldenrodyellow;
+.menu-card:hover,
+.menu-card label:hover {
+  cursor: pointer;
+  background-color: lightgoldenrodyellow;
 }
 
 .menu-card:hover {
-    scale:calc(1.2)
+  scale: calc(1.2);
 }
 
 .icon {
-    position: absolute;  
-    color: gold; 
-    background-color: navy;
-    transform: translate(0%,10%); 
-    border-radius: 999px;
-    /* width: 40px;
-    height: 40px; */
-    width: 30px; 
-    height: 30px;
-    left: 20%; 
-    transition: 0.3s; 
+  position: absolute;
+  color: gold;
+  background-color: navy;
+  transform: translate(0%, 10%);
+  border-radius: 999px;
+  width: 30px;
+  height: 30px;
+  left: 20%;
+  transition: 0.3s;
 }
 
 .icon:hover {
-    transform: scale(1.2);
-    cursor: pointer;
+  transform: scale(1.2);
+  cursor: pointer;
 }
 
 .icon i {
-    position: absolute; 
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); 
-    /* font-size:20px; */
-    font-size: 15px; 
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 15px;
 }
 
 .play-buttons {
-    justify-content: space-between;
+  justify-content: space-between;
 }
 
 .difficulty-card {
-    width: 100px;
-    border-radius: 50px;
-    border-radius: 2px solid white;
-    /* margin-right: 1em; */
-    margin: 1em 0.5em; 
+  width: 100px;
+  border-radius: 50px;
+  border-radius: 2px solid white;
+  margin: 1em 0.5em;
 }
 
 .difficulty-card:hover {
-    transform: scale(1.2); 
-    cursor: pointer;
+  transform: scale(1.2);
+  cursor: pointer;
 }

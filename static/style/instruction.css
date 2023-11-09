@@ -1,53 +1,52 @@
 body {
-    margin:0;
-    font-family: 'VT323'
+  margin: 0;
+  font-family: 'VT323';
 }
 
 h1 {
-    font-size: 60px;
-    margin-bottom: 0.3em;
+  font-size: 60px;
+  margin-bottom: 0.3em;
 }
 
 #instruction {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 20px 400px 0px 400px;
-    background-color: rgb(116, 163, 230);
-    font-size: 30px;
-    border-radius: 3rem;
-    padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 400px 0px 400px;
+  background-color: rgb(116, 163, 230);
+  font-size: 30px;
+  border-radius: 3rem;
+  padding: 30px;
 }
 
 .list {
-    margin-left: 3em;
-   /* margin-right: 3em;*/
-   padding-right: 3em;
-   padding-left: 3em;
-   margin-top: 0.5em;
+  margin-left: 3em;
+  padding-right: 3em;
+  padding-left: 3em;
+  margin-top: 0.5em;
 }
 
 #btn {
-   background-color:rgb(116, 163, 230);
-   padding:30px;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   border-radius: 2em;
-   font-size: 30px;
-   font-family: 'VT323'
+  background-color: rgb(116, 163, 230);
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2em;
+  font-size: 30px;
+  font-family: 'VT323';
 }
 
-#btn:hover{
-    cursor: pointer;
-    transform: scale(1.1);
-    transition: transform 0.3s;
+#btn:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  transition: transform 0.3s;
 }
 
 .goBack {
-    display: flex;
-   justify-content: center;
-   align-items: center;
-   margin-top: 0.7em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0.7em;
 }

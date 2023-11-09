@@ -1,74 +1,71 @@
 .quiz-container {
-    position: absolute;
-    top: 60%;
-    left: 50%;
-    transform: translate(-50%, -60%);
-    width: 60vw;
-    min-height: 70vh;
-    border-radius: 5px; 
-    background-color:cornflowerblue;
-    border: 4px solid whitesmoke;
-    border-radius: 10px;
-    color:white;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -60%);
+  width: 60vw;
+  min-height: 70vh;
+  border-radius: 5px;
+  background-color: cornflowerblue;
+  border: 4px solid whitesmoke;
+  border-radius: 10px;
+  color: white;
 }
 
-
-#city{
-    font-size: x-large;
+#city {
+  font-size: x-large;
 }
 
-#city-label{
-    font-size: x-large;
-    margin-right: 5px;
-    margin-top: 5px;
+#city-label {
+  font-size: x-large;
+  margin-right: 5px;
+  margin-top: 5px;
 }
-
-
-
 
 #timer {
-    font-size: larger;
-    text-align: right;
-    margin-right: 1em;
+  font-size: larger;
+  text-align: right;
+  margin-right: 1em;
 }
 
-.quiz-time, .scores {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 100%;
+.quiz-time,
+.scores {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
 }
 
 .quiz-info {
-    display: block; 
-    margin: 2% auto;
-    width: 500px;
-    text-align: center;
+  display: block;
+  margin: 2% auto;
+  width: 500px;
+  text-align: center;
 }
 
 .quiz-buttons {
-    display: flex;
-    justify-content: space-between;
-    margin: 5% 5%; 
+  display: flex;
+  justify-content: space-between;
+  margin: 5% 5%;
 }
 
 .enter-button {
-    width: 100px;
+  width: 100px;
 }
 
 .quiz-heading {
-    font-weight: 1000;
-    font-size: 50px;
-    text-align: center;
+  font-weight: 1000;
+  font-size: 50px;
+  text-align: center;
 }
 
 .quiz-container img {
-    height: 50px;
+  height: 50px;
 }
 
 #flag {
-    height: 150px; 
-    padding: 20px 0; 
+  height: 150px;
+  padding: 20px 0;
 }
 /* 
 .score {
@@ -78,20 +75,18 @@
     position: relative; 
 } */
 
-
-.scores{
-    padding: 10px;
+.scores {
+  padding: 10px;
 }
 
-
-#cancel{
-    height:60px;
-    width: 60px;
-    border-radius: 500px;
+#cancel {
+  height: 60px;
+  width: 60px;
+  border-radius: 500px;
 }
 
-.score-label{
-    display: flex; 
-    flex-direction: row;
-    margin-right: 10px;
+.score-label {
+  display: flex;
+  flex-direction: row;
+  margin-right: 10px;
 }
