@@ -27,8 +27,8 @@ async function makeTable(){
     .then(data => {
         console.log(data);
         listRanks(data);
-        userRank(data, username)
     })
+
 }
 
 function userRank(data, username) {

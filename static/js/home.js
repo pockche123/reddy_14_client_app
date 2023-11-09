@@ -1,11 +1,12 @@
-const soundCard = document.getElementById('sound-card')
+
 const audio = document.getElementById('audio')
 const icon = document.querySelector('#sound-card i')
 const user = document.getElementById('user')
 const form = document.getElementById('username-form')
 const input = document.getElementById('username-input')
 
-soundCard.addEventListener('click', function () {
+
+function soundControl() {
   console.log('inside clicked')
   if (audio.paused) {
     icon.className = 'fa-solid fa-volume-high'
@@ -14,10 +15,7 @@ soundCard.addEventListener('click', function () {
     audio.pause()
     icon.className = 'fa-solid fa-volume-xmark'
   }
-})
-
-form.addEventListener('submit', e => showNext(e))
-
+}
 function showNext(e) {
   
   e.preventDefault()
@@ -33,8 +31,8 @@ function showNext(e) {
 
 let buttonsVisible = false
 
-document.getElementById('play-button').addEventListener('click', function () {
-  let labels = ['easy', 'medium', 'hard']
+function selectDifficulty() {
+   let labels = ['easy', 'medium', 'hard']
 
   let buttonSection = document.querySelector('.play-buttons')
 
@@ -60,10 +58,10 @@ document.getElementById('play-button').addEventListener('click', function () {
     buttonsToRemove.forEach(button => button.remove())
   }
   buttonsVisible = !buttonsVisible
-})
+}
 
 function navToQuiz (id) {
-  const user = document.getElementById('user')
+  
   const username = user.textContent.substring(8)
   console.log('username ', username)
   console.log('inside button')
@@ -72,9 +70,11 @@ function navToQuiz (id) {
 
 function userPresent () {
   if (localStorage.getItem('storedUsername')) {
-    user.textContent += localStorage.getItem('storedUsername')
-    user.style.display = 'block'
-    playPage()
+    if (user) {
+      user.textContent += localStorage.getItem('storedUsername')
+      user.style.display = 'block'
+      playPage()
+    }
   } else {
     form.style.display = 'block'
   }
@@ -82,11 +82,17 @@ function userPresent () {
 
 userPresent()
 
-document.getElementById('exit').addEventListener('click', function () {
+// document.getElementById('exit').addEventListener('click', function () {
+//   localStorage.removeItem('storedUsername')
+//   user.textContent = user.textContent.substring(0, 8)
+//   userPage()
+// })
+
+function exitToNewUser() {
   localStorage.removeItem('storedUsername')
   user.textContent = user.textContent.substring(0, 8)
   userPage()
-})
+}
 
 function playPage () {
   form.style.display = 'none'
@@ -103,3 +109,6 @@ function userPage () {
   document.getElementById('instruction-button').style.display = 'none'
   document.getElementById('leaderboard-button').style.display = 'none'
 }
+
+
+module.exports = {soundControl, showNext, selectDifficulty, exitToNewUser}
