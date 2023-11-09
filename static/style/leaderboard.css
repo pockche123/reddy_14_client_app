@@ -46,28 +46,25 @@ table {
     border-collapse: collapse;
     background-color: #fff;
     width: auto;
+    text-align: center;
 }
 
 table, th, td {
     border: 1px solid #ddd;
+    
 }
 
-.user{
-    background-color: greenyellow;
-}
 
 th, td {
-    /* padding: 10px; */
     font-size: 20px;
 }
 
 th {
     background-color:rgb(246, 199, 110);
     color: #fff;
+    line-height: 2em;
 }
-/* tr {
-    padding: -50px;
-} */
+
 
 tr:nth-child(even) {
     background-color: #f2f2f2;
@@ -90,7 +87,6 @@ tr:nth-child(even) {
     line-height: 40px;
     cursor: pointer;
     display: inline-block;
-    /* background-color: aqua; */
 }
 
 #rightArrow {
@@ -126,4 +122,19 @@ tr:nth-child(even) {
     cursor: pointer;
     transform: scale(1.2);
     transition: transform 0.3s;
+}
+
+.userRank{
+    color: black;
+    text-align: center;
+    background-color: beige;
+}
+
+
+.score {
+    display: flex;
+    margin: 0.5em;
+    position: relative; 
+    justify-content: center;
+    align-items: center;
 }
