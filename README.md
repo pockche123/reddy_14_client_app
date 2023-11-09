@@ -10,6 +10,7 @@ Reddy 14 Client App is the frontend of an engaging geography game designed to ma
   - [Installation](#installation)
 - [Usage](#usage)
 - [Gameplay](#gameplay)
+- [Technologies](#technology)
 - [Contributing](#contributing)
 
 ## Features
@@ -65,6 +66,17 @@ Before you begin, ensure you have the following installed on your system:
 - Track your progress and see how you compare to other players on the leaderboards.\
 
 ### Technologies
+- **Watchify:** A module bundler for watching and recompiling your Browserify bundles.
+
+- **Live-server:** A development server for serving static files during development with features like live reloading.
+
+- **Concurrently:** Used to run multiple commands concurrently, which is useful for running Watchify and Live-server at the same time.
+
+- **Bootstrap:** A CSS framework for building responsive and visually appealing web pages.
+
+- **Fortawesome/fontawesome:** A library of scalable icons that can be customized with CSS.
+
+- **fontsource/vt323:** A font package.
 
 
 ### Contributing
