@@ -46,10 +46,13 @@ table {
     border-collapse: collapse;
     background-color: #fff;
     width: auto;
+    /* margin: 1em; */
+    text-align: center;
 }
 
 table, th, td {
     border: 1px solid #ddd;
+    
 }
 
 .user{
@@ -64,6 +67,7 @@ th, td {
 th {
     background-color:rgb(246, 199, 110);
     color: #fff;
+    line-height: 2em;
 }
 /* tr {
     padding: -50px;
@@ -126,4 +130,19 @@ tr:nth-child(even) {
     cursor: pointer;
     transform: scale(1.2);
     transition: transform 0.3s;
+}
+
+.userRank{
+    color: black;
+    text-align: center;
+    background-color: beige;
+}
+
+
+.score {
+    display: flex;
+    margin: 0.5em;
+    position: relative; 
+    justify-content: center;
+    align-items: center;
 }
